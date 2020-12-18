@@ -7,6 +7,7 @@ console.log(todaysDateEl);
 var hours = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 
 //looping through the hour array
+
 for (var i = 0; i < hours.length; i++) {
   console.log(hours[i]);
 
@@ -38,10 +39,6 @@ for (var i = 0; i < hours.length; i++) {
   } else {
     textArea.addClass("past");
   }
-
-  if (localStorage.getItem(textArea) !== null) {
-    textArea.text(localStorage.getItem(textArea));
-  }
 }
 //on click save text-area to local storage
 $(".saveBtn").click(function () {
@@ -49,5 +46,3 @@ $(".saveBtn").click(function () {
   localStorage.setItem("textArea", $("textarea").val());
   //   textArea.text("textArea");
 });
-
-
